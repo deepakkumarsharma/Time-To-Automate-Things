@@ -1,9 +1,31 @@
 #!/usr/bin/env ruby
 
 =begin
+  Basic Usage
+=end
+Time_To_Sleep = 2
+Status_for_DL = system "dpkg --get-selections | grep youtube-dl"
+
+=begin
   Hack UserName
 =end
 user_name = ENV['USER'].capitalize
+
+=begin
+  Check if youtube-dl present?
+=end
+
+if (Status_for_DL == true)
+  puts "-- Ah! YouTube-DL found --"
+  puts "\n" 
+else
+  system "sudo apt-get install youtube-dl"
+  if $? == 0
+    puts "YouTube-DL Installed Successfully"
+  end
+end
+
+sleep Time_To_Sleep
 
 =begin
   Let's welcome the user
