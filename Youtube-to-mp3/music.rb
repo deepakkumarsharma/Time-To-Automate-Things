@@ -32,7 +32,7 @@ sleep Time_To_Sleep
 =end
 puts "-" * 38
 puts "-" * 10 + "  Welcome " + "#{user_name}  " + "-" * 10
-puts "-- Please enter youtube-video-link: --"
+puts "-- Please enter youtube-link: --"
 puts "-" * 38
 puts "\n"
 
@@ -43,9 +43,9 @@ get_user_input = $stdin.gets.chomp
   Audio or Video
 =end
 puts "\n"
-puts "-" * 45
-puts "-- Do you VIDEO or AUDIO of following link --"
-puts "-" * 45
+puts "-" * 50
+puts "-- Do you want VIDEO or AUDIO of following link --"
+puts "-" * 50
 puts "\n"
 print "Decision --> " 
 user_audio_video_input = $stdin.gets.chomp
@@ -82,7 +82,7 @@ if (av_input == "video")
 elsif (av_input == "audio")
   system 'youtube-dl --extract-audio --audio-format mp3 -f bestaudio --audio-quality 0 ' + get_user_input  
 else
-  puts "-------------- Wrong input ---------------"
+  puts "-------------- Wrong Input ---------------"
   puts "-- Please choose between Audio or Video --"
   puts "-" * 42
 end
