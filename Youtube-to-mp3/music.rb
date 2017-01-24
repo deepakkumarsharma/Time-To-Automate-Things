@@ -20,7 +20,7 @@ if (Status_for_DL == true)
   puts "\n" 
 else
   system "sudo apt-get install youtube-dl"
-  system "sudo pip install --upgrade youtube_dl"
+  system "sudo pip install --upgrade youtube-dl"
   if $? == 0
     puts "YouTube-DL Installed Successfully"
   end
