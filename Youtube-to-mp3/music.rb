@@ -81,7 +81,7 @@ if (av_input == "video")
       system 'youtube-dl --format 22 ' + get_user_input  
   end  
 elsif (av_input == "audio")
-  system 'youtube-dl --extract-audio --audio-format mp3 -f bestaudio --audio-quality 0 ' + get_user_input  
+  system 'youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 ' + get_user_input  
 else
   puts "-------------- Wrong Input ---------------"
   puts "-- Please choose between Audio or Video --"
